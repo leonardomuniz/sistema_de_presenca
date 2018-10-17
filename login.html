@@ -29,7 +29,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="material-icons prefix" onclick = 'mostrarSenha()'>visibility</i>
+                        <i class="material-icons prefix" id="icone" onclick="mostrarSenha()">visibility</i>
                         <input id="senha" type="password" class="validate">
                         <label for="senha">Senha</label>                   
                     </div>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div style="bottom:0;left:0; position: fixed; text-align: center; width: 100%">
-            <p class=" grey-text" >Esqueçeu sua senha ?  <a>Clique aqui.</a></p>
+            <p class=" grey-text" >Esqueçeu sua senha ?  <a href="index.html">Clique aqui.</a></p>
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -52,12 +52,12 @@
             
             if ( senha.type === "password"){
                 senha.type = "text";
+                document.getElementById('icone').innerHTML = 'visibility'
             } else {
                 senha.type = "password";
+                document.getElementById('icone').innerHTML = 'visibility_off'
             }
         }
-
-
     </script>
 </body>
 

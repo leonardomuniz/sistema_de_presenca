@@ -22,15 +22,28 @@
       <br><br><br>
       <h1 class="white-text"><i class="large material-icons purple-text text-darken-2" id="presenca">sentiment_neutral</i></h1>
       <p class="grey-text">Olá "fulano" click no botão a baixo <br> para confirmar sua presença no evento !</p> <br>
-      <a class="waves-effect waves-light btn orange darken-2" onclick='checarPresenca() ; M.toast({html: "Sua presença no evento foi confirmada com sucesso !"})'  >checar presença</a>
+      <a class="waves-effect waves-light btn orange darken-2" onclick='checarPresenca() ; M.toast({html: "Sua presença no evento foi confirmada com sucesso !"})'>checar
+        presença</a>
+      <br><br>
+      <a class="waves-effect waves-light btn orange darken-2" id="texto" onclick="mudarTexto()">checar
+        presença na palestra</a>
 
     </div>
+    <div style="bottom:0;left:0; position: fixed; text-align: center; width: 100%">
+        <p class=" grey-text" ><a href="login.html">login</a> ?  <a href="adm.html">adm</a></p>
+    </div>    
   </div>
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
     function checarPresenca () {
       document.getElementById('presenca').innerHTML = 'sentiment_very_satisfied'
+    }
+    
+    function mudarTexto () {
+      document.getElementById('texto').innerHTML = 'sua presença na palestra foi confirmada ';
+      document.getElementById('texto').className = 'waves-effect waves-light btn purple darken-2'; 
     }
   </script>
 </body>
