@@ -12,19 +12,15 @@
 </head>
 
 <body>
-    <nav style="box-shadow:none">
-        <div class="nav-wrapper white">
-            <a href="index.html" data-target="mobile-demo" class="sidenav-trigger "><i class="material-icons purple-text text-darken-2">home</i></a>
-        </div>
-    </nav>
+
     <div class="container">
         <div class="row center">
             <br><br><br>
-            <h3>Evento <b class="purple-text text-darken-2">"CCXP"</b></h3>
+            <h3 style="margin-top: 20%">Evento <b class="green-text text-darken-2">"nome do evento"</b></h3>
             <br><br>
-            <a class="waves-effect waves-light btn orange darken-2" onclick="esconderTabela()">gerar relatório evento</a>
+            <a class="waves-effect waves-light btn green darken-2" onclick="esconderTabela()" style="width: 60%">gerar relatório evento</a>
             <br><br>
-            <table class="responsive-table centered highlight" id="tabelaEvento" style="display:none">
+            <table class="responsive-table centered highlight" id="tabelaEvento" style="display:none;">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -51,8 +47,8 @@
                         </tr>
                 </tbody>
             </table>
-            <br>
-            <a class="waves-effect waves-light btn orange darken-2" onclick="esconderTabela2()">gerar relatório
+
+            <a class="waves-effect waves-light btn red darken-2" onclick="esconderTabela2()" style="width: 60%">gerar relatório
                 palestra</a>
             <br><br>
             <table class="responsive-table centered highlight" id="tabelaPalestra" style="display:none">
@@ -77,6 +73,7 @@
                     </tr>
                 </tbody>
             </table>
+            <a class="waves-effect waveslight btn-flat white green-text"  onclick="M.toast({html: 'QR code gerado com sucesso!'})" style="width:60%">gerar QR code</a>
         </div>
     </div>
     <!--JavaScript at end of body for optimized loading-->
