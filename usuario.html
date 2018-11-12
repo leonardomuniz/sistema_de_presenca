@@ -16,16 +16,15 @@
     <div class="row center">
       <br><br><br>
       <h1 class="white-text"><i class="large material-icons green-text text-darken-2" id="presenca">sentiment_neutral</i></h1>
-      <p class="grey-text">Olá "fulano" click no botão a baixo <br> para confirmar sua presença no evento !</p> <br>
+      <p class="grey-text" id="texto">Olá "fulano" click no botão a baixo <br> para confirmar sua presença no evento !</p> <br>
       <a class="waves-effect waves-light btn red darken-2 modal-trigger" onclick='checarPresenca()' href="#modal1">gerar qr code</a>
       <br><br>
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h3>QR code aqui !</h3>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <p class="grey-text"> Aponte a camera para o QR code para confirmar sua presença !</p>
+      <br>
+      <a class="btn waves-light waves-effect green darken-2" onclick="mudarTexto()">checar</a>
     </div>
   </div>
     </div>
@@ -42,6 +41,9 @@
       $('.modal').modal();
     });
 
+    function mudarTexto () {
+      document.getElementById ('texto').innerHTML = 'Parabéns <b>fulano</b> sua entrada no evento <b>nome do evento</b> foi confirmada !'
+    }
        
   </script>
 </body>

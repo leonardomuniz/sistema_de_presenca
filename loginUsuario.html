@@ -24,11 +24,16 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <i class="material-icons prefix" id="icone" onclick="mostrarSenha()">visibility</i>
               <input id="senha" type="password" class="validate">
               <label for="senha">Senha</label>                   
             </div>
           </div>
+          <p>
+            <label class="left">
+              <input type="checkbox" onclick="mostrarSenha()"/>
+              <span>Ver senha</span>
+            </label>
+          </p> <br>
           <p class="grey-text">Caso  você ainda não tenha um cadastro, clique <a href="cadastro.html">aqui.</a></p>
           <br>
           <a class="btn waves-effect waves-light green" href="usuario.html">entrar</a>
@@ -45,10 +50,8 @@
             
             if ( senha.type === "password"){
                 senha.type = "text";
-                document.getElementById('icone').innerHTML = 'visibility'
             } else {
                 senha.type = "password";
-                document.getElementById('icone').innerHTML = 'visibility_off'
             }
         }        
       </script>
